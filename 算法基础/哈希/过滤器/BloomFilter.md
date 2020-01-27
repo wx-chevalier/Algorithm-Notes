@@ -76,7 +76,7 @@
 
 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319062089.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319059614.png)
 
-设 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319061466.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319068991.png) ， 则简化为
+设 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319061466.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319068991.png) ，则简化为
 
 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319075.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319073942.png)，两边取对数
 

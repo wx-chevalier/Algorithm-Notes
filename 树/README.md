@@ -153,8 +153,8 @@ Funtion QuadCreateBranch ( n, depth,rect ) { if ( depth!=0 ) { n = new node; //�
 
 Funtion QuadInsert(i,n) //该函数插入后四叉树中的每个节点所存储的对象数量不是 1 就是 0 {  
  if(节点 n 有孩子) {  
- 通过划分区域判断 i 应该放置于 n 节点的哪一个孩子节点 c； 
- QuadInsert(i,c)；} else if(节点 n 存储了一个对象) { 为 n 节点创建四个孩子；将 n 节点中的对象移到它应该放置的孩子节点中；通过划分区域判断 i 应该放置于 n 节点的哪一个孩子节点 c；QuadInsert(i,c)；} else if(n 节点数据为空)  
+ 通过划分区域判断 i 应该放置于 n 节点的哪一个孩子节点 c；
+QuadInsert(i,c)；} else if(节点 n 存储了一个对象) { 为 n 节点创建四个孩子；将 n 节点中的对象移到它应该放置的孩子节点中；通过划分区域判断 i 应该放置于 n 节点的哪一个孩子节点 c；QuadInsert(i,c)；} else if(n 节点数据为空)  
  { 将 i 存储到节点 n 中；} }
 
 ### 四叉树查找

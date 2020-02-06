@@ -5,7 +5,7 @@ RFC 1952 是 GZIP file format specification version 4.3。该规范主要定义�
 每个压缩数据集都是下面的结构：
 
 ```sh
-| ID1 | ID2 | CM | FLG | MTIME（4 字节） | XFL | OS | ---> more
+| ID1 | ID2 | CM | FLG | MTIME（4 字节）| XFL | OS | ---> more
 ```
 
 | 与 | 之间是 1 byte，都是大端字节（Big Edian）

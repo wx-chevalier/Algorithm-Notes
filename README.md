@@ -138,12 +138,12 @@ Contributions are what make the open source community such an amazing place to b
 | **栈**         | n      | n      | 1      | 1      |                                      |
 | **队列**       | n      | n      | 1      | 1      |                                      |
 | **链表**       | n      | n      | 1      | 1      |                                      |
-| **哈希表**     | -      | n      | n      | n      | 在完全哈希函数情况下，复杂度是 O(1） |
+| **哈希表**     | -      | n      | n      | n      | 在完全哈希函数情况下，复杂度是 O(1）|
 | **二分查找树** | n      | n      | n      | n      | 在平衡树情况下，复杂度是 O(log(n))   |
 | **B 树**       | log(n) | log(n) | log(n) | log(n) |                                      |
 | **红黑树**     | log(n) | log(n) | log(n) | log(n) |                                      |
 | **AVL 树**     | log(n) | log(n) | log(n) | log(n) |                                      |
-| **布隆过滤器** | -      | 1      | 1      | -      | 存在一定概率的判断错误（误判成存在） |
+| **布隆过滤器** | -      | 1      | 1      | -      | 存在一定概率的判断错误（误判成存在）|
 
 ### 数组排序算法的复杂性
 

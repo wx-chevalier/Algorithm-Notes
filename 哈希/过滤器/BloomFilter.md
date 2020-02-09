@@ -26,7 +26,7 @@
 
 而当考虑到 collision 时，对于有 m 个 slot 的 bit array 或者其他哈希表(即 k=1 的布隆过滤器)，如果想要保证 1%的误判率，则这个 bit array 只能存储 m/100 个元素，因而有大量的空间被浪费，同时也会使得空间复杂度急剧上升，这显然不是 space efficient 的。解决的方法很简单，使用 k>1 的布隆过滤器，即 k 个 hash function 将每个元素改为对应于 k 个 bits，因为误判度会降低很多，并且如果参数 k 和 m 选取得好，一半的 m 可被置为为 1，这充分说明了布隆过滤器的 space efficient 性。
 
-以垃圾邮件过滤中黑白名单为例：现有 1 亿个 email 的黑名单，每个都拥有 8 bytes 的指纹信息，则可能的元素范围为 [![clip_image00](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318584027.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318572980.png) ，对于 bit array 来说是根本不可能的范围，而且元素的数量(即 email 列表)为 [![clip_image002[]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318585390.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318586502.png) ，相比于元素范围过于稀疏，而且还没有考虑到哈希表中的 collision 问题。
+以垃圾邮件过滤中黑白名单为例：现有 1 亿个 email 的黑名单，每个都拥有 8 bytes 的指纹信息，则可能的元素范围为 [![clip_image00](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318584027.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318572980.png)，对于 bit array 来说是根本不可能的范围，而且元素的数量(即 email 列表)为 [![clip_image002[]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318585390.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318586502.png)，相比于元素范围过于稀疏，而且还没有考虑到哈希表中的 collision 问题。
 
 若采用哈希表，由于大多数采用 open addressing 来解决 collision，而此时的 search 时间复杂度为 ：
 
@@ -76,7 +76,7 @@
 
 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319062089.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319059614.png)
 
-设 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319061466.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319068991.png) ，则简化为
+设 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319061466.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319068991.png)，则简化为
 
 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319075.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319073942.png)，两边取对数
 
@@ -148,7 +148,7 @@
 
 [![clip_image002[7]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319256072.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319253597.png) 从而使得 P(error)最小时，我们注意到：
 
-[![clip_image002[7]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319266562.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/20110216231926499.png) 中的 [![clip_image002[8]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319269877.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319269038.png) ，即
+[![clip_image002[7]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319266562.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/20110216231926499.png) 中的 [![clip_image002[8]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319269877.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319269038.png)，即
 
 [![clip_image002[8]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319272003.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319275940.png)
 

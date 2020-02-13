@@ -28,7 +28,7 @@
 
 以垃圾邮件过滤中黑白名单为例：现有 1 亿个 email 的黑名单，每个都拥有 8 bytes 的指纹信息，则可能的元素范围为 [![clip_image00](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318584027.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318572980.png)，对于 bit array 来说是根本不可能的范围，而且元素的数量(即 email 列表)为 [![clip_image002[]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318585390.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318586502.png)，相比于元素范围过于稀疏，而且还没有考虑到哈希表中的 collision 问题。
 
-若采用哈希表，由于大多数采用 open addressing 来解决 collision，而此时的 search 时间复杂度为 ：
+若采用哈希表，由于大多数采用 open addressing 来解决 collision，而此时的 search 时间复杂度为：
 
 [![clip_image002[]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318595880.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162318587865.png)
 

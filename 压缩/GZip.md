@@ -11,7 +11,7 @@ RFC 1952 是 GZIP file format specification version 4.3。该规范主要定义�
 | 与 | 之间是 1 byte，都是大端字节（Big Edian）
 其中 ID1 和 ID2 分别是 0x1f 和 0x8b，用来标识文件格式是 gzip
 CM 标识 加密算法，目前 0-7 是保留字，8 指的是 deflate 算法
-FLG 从低地址到高地址分别是 FTEXT、FHCRC、FEXTRA、FNAME、FCOMMENT、reserved、 reserved、reserved，这里每个 bit 被设置了之后有什么意义感兴趣的话可以详细参考 RFC 1952。比较有意思的是 FEXTRA，如果它被设置了表示存在额外的拓展字段。拓展字段的结构如下：
+FLG 从低地址到高地址分别是 FTEXT、FHCRC、FEXTRA、FNAME、FCOMMENT、reserved、reserved、reserved，这里每个 bit 被设置了之后有什么意义感兴趣的话可以详细参考 RFC 1952。比较有意思的是 FEXTRA，如果它被设置了表示存在额外的拓展字段。拓展字段的结构如下：
 
 ```
 | SI1 | SI2 | LEN | ... LEN bytes of subfield data ... |

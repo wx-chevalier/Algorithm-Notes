@@ -19,11 +19,11 @@
     <a href="https://github.com/wx-chevalier/AlgoDS-Series"><strong>在线阅读</strong></a>
     <br />
     <br />
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series">View Demo</a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Series">速览手册</a>
     ·
     <a href="https://github.com/wx-chevalier/AlgoDS-Series/issues">Report Bug</a>
     ·
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series/issues">Request Feature</a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Series/issues">参考资料</a>
   </p>
 </p>
 

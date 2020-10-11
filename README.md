@@ -33,9 +33,9 @@
 
 数据结构与算法系列笔记。
 
-# Nav | 导读
+> 本书的精排目录导航版请参考 [https://ng-tech.icu/Algorithm-Series](https://ng-tech.icu/Algorithm-Series)。
 
-本书的精排目录导航版请参考 [https://ng-tech.icu/AlgoDS-Series](https://ng-tech.icu/AlgoDS-Series)。
+# Nav | 导读
 
 # About | 关于
 

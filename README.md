@@ -16,7 +16,7 @@
   <p align="center">
     数据结构与算法系列笔记
     <br />
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series"><strong>在线阅读</strong></a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Series"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
     <a href="https://github.com/wx-chevalier/AlgoDS-Series">速览手册</a>

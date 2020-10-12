@@ -79,8 +79,6 @@ Contributions are what make the open source community such an amazing place to b
 [license-shield]: https://img.shields.io/github/license/wx-chevalier/AlgoDS-Series.svg?style=flat-square
 [license-url]: https://github.com/wx-chevalier/AlgoDS-Series/blob/master/LICENSE.txt
 
-![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2017/1/2/1--hRBr9wXEoFe_3TuTpuDVA.jpeg)
-
 # 数据结构与算法基础
 
 > “Bad programmers worry about the code. Good programmers worry about data structures and their relationships.”

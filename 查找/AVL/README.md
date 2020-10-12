@@ -45,7 +45,7 @@ AVL 树的调整过程很类似于数学归纳法，每次在插入新节点之�
 
 ## Left Rotation: 左旋 , 右子树右子节点
 
-当新插入的结点为右子树的右子结点时，我们需要进行左旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_left_rotation.jpg) 我们应该找到离新插入的结点最近的一个非平衡结点，来以其为轴进行旋转，下面看一个比较复杂的情况: ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/F8CD6D7F-825E-44BB-B295-3B5AD1F11930.png)
+当新插入的结点为右子树的右子结点时，我们需要进行左旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_left_rotation.jpg) 我们应该找到离新插入的结点最近的一个非平衡结点，来以其为轴进行旋转，下面看一个比较复杂的情况:
 
 ```
 /**
@@ -91,7 +91,7 @@ private AVLNode rotateLeft(AVLNode a) {
 
 ## Right Rotation: 右旋 , 左子树左子节点
 
-当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况 : ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/23B249C2-F7A3-44D5-ACCA-B34CC6F41089.png)
+当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况 :
 
 ```
 private AVLNode rotateRight(AVLNode a) {
@@ -123,7 +123,7 @@ private AVLNode rotateRight(AVLNode a) {
 
 ## Left-Right Rotation: 先左旋再右旋 , 左子树右子节点
 
-在某些情况下我们需要进行两次旋转操作，譬如在如下的情况下，某个结点被插入到了左子树的右子结点: ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_subtree_of_left_subtree.jpg) 我们首先要以 A 为轴进行左旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_left_rotation.jpg) 然后需要以 C 为轴进行右旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_rotation.jpg) 最终得到的又是一棵平衡树 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg) ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/6CE95997-6D45-4483-8962-2BEEA8CF0DDF.png)
+在某些情况下我们需要进行两次旋转操作，譬如在如下的情况下，某个结点被插入到了左子树的右子结点: ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_subtree_of_left_subtree.jpg) 我们首先要以 A 为轴进行左旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_left_rotation.jpg) 然后需要以 C 为轴进行右旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_rotation.jpg) 最终得到的又是一棵平衡树 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg)
 
 ```
 private AVLNode rotateLeftThenRight(AVLNode n) {
@@ -134,7 +134,7 @@ private AVLNode rotateLeftThenRight(AVLNode n) {
 
 ## Right-Left Rotation: 先右旋再左旋 , 右子树左子节点
 
-![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_subtree_of_right_subtree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_right_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg) ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/7/4/CEB6A7C5-4A5A-4491-9A80-8DDC859F8B7B.png)
+![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_subtree_of_right_subtree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_right_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg)
 
 ```
 private AVLNode rotateRightThenLeft(AVLNode n) {

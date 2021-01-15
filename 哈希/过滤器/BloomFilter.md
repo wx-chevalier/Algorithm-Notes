@@ -80,7 +80,7 @@
 
 [![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319075.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319073942.png)，两边取对数
 
-[![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319071367.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319072480.png) , 两边对 k 求导
+[![clip_image002[3]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319071367.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319072480.png), 两边对 k 求导
 
 [![clip_image002[4]](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319087921.png)](http://images.cnblogs.com/cnblogs_com/allensun/201102/201102162319082414.png)
 

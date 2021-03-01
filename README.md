@@ -35,7 +35,7 @@
 
 > 本书的精排目录导航版请参考 [https://ng-tech.icu/Algorithm-Series](https://ng-tech.icu/Algorithm-Series)。
 
-# Nav | 导读
+# Nav | 关联导航
 
 # About | 关于
 

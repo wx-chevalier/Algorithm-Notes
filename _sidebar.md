@@ -10,12 +10,12 @@
   - 5 压缩
     - [5.1 GZip](/压缩/GZip.md)
   - [6 哈希](/哈希/README.md)
-    - [6.1 HashTable](/哈希/HashTable/README.md)
+    - [6.1 哈希函数](/哈希/哈希函数/README.md)
+      - [6.1.1 C++](/哈希/哈希函数/C++.md)
+      - [6.1.2 Java](/哈希/哈希函数/Java.md)
+      - [6.1.3 碰撞解决](/哈希/哈希函数/碰撞解决.md)
+    - [6.2 哈希表](/哈希/哈希表/README.md)
       
-    - [6.2 哈希函数](/哈希/哈希函数/README.md)
-      - [6.2.1 C++](/哈希/哈希函数/C++.md)
-      - [6.2.2 Java](/哈希/哈希函数/Java.md)
-      - [6.2.3 碰撞解决](/哈希/哈希函数/碰撞解决.md)
     - 6.3 过滤器
       - [6.3.1 BloomFilter](/哈希/过滤器/BloomFilter.md)
       - [6.3.2 CuckooFilter](/哈希/过滤器/CuckooFilter.md)

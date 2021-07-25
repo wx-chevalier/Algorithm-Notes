@@ -35,19 +35,3 @@ data =BTree_Search(root, my_key);
 ```
 
 关于 B-Tree 有一系列有趣的性质，例如一个度为 d 的 B-Tree，设其索引 N 个 key，则其树高 h 的上限为 logd((N+1)/2)，检索一个 key，其查找节点个数的渐进复杂度为 O(logdN)。从这点可以看出，B-Tree 是一个非常有效率的索引数据结构。
-
-# B+Tree
-
-B-Tree 有许多变种，其中最常见的是 B+Tree，例如 MySQL 就普遍使用 B+Tree 实现其索引结构。与 B-Tree 相比，B+Tree 有以下不同点：
-
-- 每个节点的指针上限为 2d 而不是 2d+1。
-
-- 内节点不存储 data，只存储 key；叶子节点不存储指针。
-
-下图是一个简单的 B+Tree 示意。
-
-![](https://ww1.sinaimg.cn/large/007rAy9hly1g162uiayzzj30cq037jrf.jpg)
-
-由于并不是所有节点都具有相同的域，因此 B+Tree 中叶节点和内节点一般大小不同。这点与 B-Tree 不同，虽然 B-Tree 中不同节点存放的 key 和指针可能数量不一致，但是每个节点的域和上限是一致的，所以在实现中 B-Tree 往往对每个节点申请同等大小的空间。
-
-一般来说，B+Tree 比 B-Tree 更适合实现外存储索引结构。

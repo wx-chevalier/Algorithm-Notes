@@ -8,7 +8,7 @@
 BalanceFactor = height(left-sutree) − height(right-sutree)
 ```
 
-![](http://www.tutorialspoint.com/data_structures_algorithms/images/unbalanced_avl_trees.jpg) AVL 树中的结点的数据结构可以表示为 :
+![](http://www.tutorialspoint.com/data_structures_algorithms/images/unbalanced_avl_trees.jpg) AVL 树中的结点的数据结构可以表示为
 
 ```
 package wx.algorithm.search.avl;
@@ -91,7 +91,7 @@ private AVLNode rotateLeft(AVLNode a) {
 
 ## Right Rotation: 右旋, 左子树左子节点
 
-当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况 :
+当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况
 
 ```
 private AVLNode rotateRight(AVLNode a) {

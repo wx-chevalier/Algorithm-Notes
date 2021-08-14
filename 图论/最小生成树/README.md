@@ -1,6 +1,4 @@
-﻿- [最小生成树,Prim 和 Kruskal 详细学习笔记](http://threezj.com/2016/04/24/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91,Prim%E5%92%8CKruskal%E8%AF%A6%E7%BB%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)
-
-# 最大权和生成树
+﻿# 最大权和生成树
 
 一个有 n 个结点的连通图的生成树是原图的最小连通子图，且包含原图中所有 n 个结点，并且有保持图联通的最少的
 边。最大生成树就是权和最大生成树，现在给出一个无向带权图的邻接矩阵，权为 0 表示没有边。｛{0，4，5，0，3}，{4，0，4，2，3}，
@@ -106,3 +104,7 @@ private Edge[] edgeTo;        // edgeTo[v] = shortest edge from tree vertex 
 ```
 
 > Kruskal can have better performance if the edges can be sorted in linear time, or are already sorted。Prim’s better if the number of edges to vertices is high.
+
+# Links
+
+- [最小生成树,Prim 和 Kruskal 详细学习笔记](http://threezj.com/2016/04/24/%E6%9C%80%E5%B0%8F%E7%94%9F%E6%88%90%E6%A0%91,Prim%E5%92%8CKruskal%E8%AF%A6%E7%BB%86%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/)

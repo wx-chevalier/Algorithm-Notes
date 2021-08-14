@@ -5,17 +5,13 @@
 那么 B-Tree 是满足下列条件的数据结构：
 
 - 一个节点中的 key 从左到右非递减排列。所有节点组成树结构。每个指针要么为 null，要么指向另外一个节点。
-
 - 每个叶节点最少包含一个 key 和两个指针，最多包含 2d-1 个 key 和 2d 个指针。key 和指针互相间隔，节点两端是指针。
-
 - 叶子节点的指针均为 null，所有子叶节点具有相同的深度，等于树高 h。
 
 B-Tree 还中的父子节点还满足以下排序规则：
 
 - 如果某个指针在节点 node 最左边且不为 null，则其指向节点的所有 key 小于 v(key1)，其中 v(key1)为 node 的第一个 key 的值。
-
 - 如果某个指针在节点 node 最右边且不为 null，则其指向节点的所有 key 大于 v(keym)，其中 v(keym)为 node 的最后一个 key 的值。
-
 - 如果某个指针在节点 node 的左右相邻 key 分别是 keyi 和 keyi+1 且不为 null，则其指向节点的所有 key 小于 v(keyi+1)且大于 v(keyi)。
 
 ![](https://ww1.sinaimg.cn/large/007rAy9hly1g162uiayzzj30cq037jrf.jpg)

@@ -65,17 +65,15 @@
   - [7 数据结构](/数据结构/README.md)
     - 7.1 压缩
       - [7.1.1 GZip](/数据结构/压缩/GZip.md)
-    - [7.2 哈希](/数据结构/哈希/README.md)
-      - [7.2.1 哈希函数](/数据结构/哈希/哈希函数/README.md)
+    - [7.2 哈希表](/数据结构/哈希表/README.md)
+      - [7.2.1 哈希函数](/数据结构/哈希表/哈希函数/README.md)
         
-      - [7.2.2 哈希表](/数据结构/哈希/哈希表/README.md)
+      - [7.2.2 碰撞解决](/数据结构/哈希表/碰撞解决/README.md)
         
-      - [7.2.3 碰撞解决](/数据结构/哈希/碰撞解决/README.md)
-        
-      - 7.2.4 过滤器
-        - [7.2.4.1 BloomFilter](/数据结构/哈希/过滤器/BloomFilter.md)
-        - [7.2.4.2 CuckooFilter](/数据结构/哈希/过滤器/CuckooFilter.md)
-        - [7.2.4.3 SuRF](/数据结构/哈希/过滤器/SuRF.md)
+      - 7.2.3 过滤器
+        - [7.2.3.1 BloomFilter](/数据结构/哈希表/过滤器/BloomFilter.md)
+        - [7.2.3.2 CuckooFilter](/数据结构/哈希表/过滤器/CuckooFilter.md)
+        - [7.2.3.3 SuRF](/数据结构/哈希表/过滤器/SuRF.md)
     - 7.3 字符串
       - [7.3.1 Trie](/数据结构/字符串/Trie/README.md)
         
@@ -129,6 +127,6 @@
     
   - 9 OJ 实践
     - [9.1 LeetCode](/OJ%20实践/LeetCode/README.md)
-      
+      - [9.1.1 设计链表](/OJ%20实践/LeetCode/707-设计链表.md)
     - [9.2 剑指 Offer](/OJ%20实践/剑指%20Offer/README.md)
       

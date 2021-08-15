@@ -78,6 +78,10 @@ Contributions are what make the open source community such an amazing place to b
 
 - [Awesome-CS-Books](https://github.com/wx-chevalier/Awesome-CS-Books): :books: Awesome CS Books/Series(.pdf by git lfs) Warehouse for Geeks, ProgrammingLanguage, SoftwareEngineering, Web, AI, ServerSideApplication, Infrastructure, FE etc. :dizzy: 优秀计算机科学与技术领域相关的书籍归档。
 
+- https://github.com/trekhleb/javascript-algorithms
+
+- https://zq99299.github.io/dsalg-tutorial/
+
 ## Copyright & More | 延伸阅读
 
 笔者所有文章遵循[知识共享 署名 - 非商业性使用 - 禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。您还可以前往 [NGTE Books](https://ng-tech.icu/books/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
@@ -99,6 +103,3 @@ Contributions are what make the open source community such an amazing place to b
 [license-url]: https://github.com/wx-chevalier/AlgoDS-Series/blob/master/LICENSE.txt
 
 # Links
-
-- https://legacy.gitbook.com/book/alleniverson/data-structure-and-algorithms/details
-- https://github.com/trekhleb/javascript-algorithms

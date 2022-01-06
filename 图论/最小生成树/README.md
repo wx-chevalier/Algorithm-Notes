@@ -7,7 +7,8 @@
 # 最小生成树
 
 最小生成树其实是最小权重生成树的简称，一副连通加权无向图中一棵权值最小的生成树。
-## Kruskal
+
+## Kruskal
 
 (1)新建图 G
 
@@ -19,26 +20,26 @@
 ```
 public class KruskalMST {
 
-    private Queue<Edge> mst = new Queue<>();
-    private double weight;
+    private Queue<Edge> mst = new Queue<>();
+    private double weight;
 
-    public KruskalMST(EdgeWeightedGraph g){
-        MinPQ<Edge> minPQ = new MinPQ<>();
-        for (Edge edge:g.edges()){
-            minPQ.insert(edge);
-        }
-        UF uf =new UF(minPQ.size());
-        while (!minPQ.isEmpty()){
-            Edge edge = minPQ.delMin();
-            int v = edge.either();
-            int w = edge.other(v);
-            if(!uf.connected(v,w)){
-                uf.union(v,w);
-                mst.enqueue(edge);
-                //weight+=edge.weight();
-            }
-        }
-    }
+    public KruskalMST(EdgeWeightedGraph g){
+        MinPQ<Edge> minPQ = new MinPQ<>();
+        for (Edge edge:g.edges()){
+            minPQ.insert(edge);
+        }
+        UF uf =new UF(minPQ.size());
+        while (!minPQ.isEmpty()){
+            Edge edge = minPQ.delMin();
+            int v = edge.either();
+            int w = edge.other(v);
+            if(!uf.connected(v,w)){
+                uf.union(v,w);
+                mst.enqueue(edge);
+                //weight+=edge.weight();
+            }
+        }
+    }
 }
 
 
@@ -59,47 +60,47 @@ Prim 算法，简单的说就是从一个点开始不断让树长大的过程,�
 ![](http://7xrsib.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9C%9620160424222602.jpg)
 
 ```
-private Edge[] edgeTo;        // edgeTo[v] = shortest edge from tree vertex to non-tree vertex
-    private double[] distTo;      // distTo[v] = weight of shortest such edge
-    private boolean[] marked;     // marked[v] = true if v on tree, false otherwise
-    private IndexMinPQ<Double> pq;
+private Edge[] edgeTo;        // edgeTo[v] = shortest edge from tree vertex to non-tree vertex
+    private double[] distTo;      // distTo[v] = weight of shortest such edge
+    private boolean[] marked;     // marked[v] = true if v on tree, false otherwise
+    private IndexMinPQ<Double> pq;
 
-    public PrimMST(EdgeWeightedGraph G){
-        edgeTo = new Edge[G.V()];
-        distTo = new double[G.V()];
-        marked = new boolean[G.V()];
-        pq = new IndexMinPQ<Double>(G.V());
-        for (int v = 0; v < G.V(); v++)
-            distTo[v] = Double.POSITIVE_INFINITY;
+    public PrimMST(EdgeWeightedGraph G){
+        edgeTo = new Edge[G.V()];
+        distTo = new double[G.V()];
+        marked = new boolean[G.V()];
+        pq = new IndexMinPQ<Double>(G.V());
+        for (int v = 0; v < G.V(); v++)
+            distTo[v] = Double.POSITIVE_INFINITY;
 
-        for (int v = 0; v < G.V(); v++)      // run from each vertex to find
-            if (!marked[v]) prim(G, v);      // minimum spanning forest
-    }
+        for (int v = 0; v < G.V(); v++)      // run from each vertex to find
+            if (!marked[v]) prim(G, v);      // minimum spanning forest
+    }
 
-    private void prim(EdgeWeightedGraph g, int s) {
-        distTo[s]=0;
-        pq.insert(s,distTo[s]);
-        while (!pq.isEmpty()){
-            grow(g,pq.delMin());
-        }
-    }
+    private void prim(EdgeWeightedGraph g, int s) {
+        distTo[s]=0;
+        pq.insert(s,distTo[s]);
+        while (!pq.isEmpty()){
+            grow(g,pq.delMin());
+        }
+    }
 
-    private void grow(EdgeWeightedGraph g, int v) {
-        marked[v]=true;
-        for (Edge e :g.adj(v)){
-            int w = e.other(v);
-            if(marked[w])   continue;
-            if(distTo[w]>e.weight()){
-                distTo[w]=e.weight();
-                edgeTo[w] = e;
-                if(pq.contains(w))
-                    pq.decreaseKey(w,distTo[w]);
-                else
-                    pq.insert(w,distTo[w]);
-            }
-        }
+    private void grow(EdgeWeightedGraph g, int v) {
+        marked[v]=true;
+        for (Edge e :g.adj(v)){
+            int w = e.other(v);
+            if(marked[w])   continue;
+            if(distTo[w]>e.weight()){
+                distTo[w]=e.weight();
+                edgeTo[w] = e;
+                if(pq.contains(w))
+                    pq.decreaseKey(w,distTo[w]);
+                else
+                    pq.insert(w,distTo[w]);
+            }
+        }
 
-    }
+    }
 
 ```
 

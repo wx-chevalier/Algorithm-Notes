@@ -20,12 +20,12 @@ B-Tree 还中的父子节点还满足以下排序规则：
 
 ```c
 BTree_Search(node,key) {
-    if(node == null) returnnull;
-    foreach(node.key){
-        if(node.key[i]== key) return node.data[i];
-        if(node.key[i]> key) return BTree_Search(point[i]->node, key);
-    }
-    return BTree_Search(point[i+1]->node, key);
+    if(node == null) returnnull;
+    foreach(node.key){
+        if(node.key[i]== key) return node.data[i];
+        if(node.key[i]> key) return BTree_Search(point[i]->node, key);
+    }
+    return BTree_Search(point[i+1]->node, key);
 }
 data =BTree_Search(root, my_key);
 ```

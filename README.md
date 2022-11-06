@@ -31,7 +31,7 @@
 
 # Introduction | 前言
 
-> 本书的精排目录导航版请参考 [https://ng-tech.icu/Algorithm-Series](https://ng-tech.icu/Algorithm-Series)。
+> 本书的精排目录导航版请参考 [https://wx-chevalier.github.io/Algorithm-Series](https://wx-chevalier.github.io/Algorithm-Series)。
 
 > “Bad programmers worry about the code. Good programmers worry about data structures and their relationships.”
 > — Linus Torvalds, creator of Linux
@@ -46,9 +46,9 @@
 
 玩算法的码农，打拼靠蓝条，像是法师。数学就等于蓝条最大值，数学差，魔法值不高，很快就到瓶颈了。外语影响回蓝速度。经验和智力加急速和穿透的。不玩算法的码农，像是战士，打拼靠血条，体质加生命，精神加生命回复，经验和敏捷加急速和破甲。
 
-的确很少有写业务代码的时候会直接用上二叉树。但是真的没有吗？XML/DOM是什么？是不是一棵树？为什么DOM可以和XML一一对应？因为XML序列化就是树的遍历的结果。能和XML对应，也就能跟JSON对应，因为两者都可以对应到树（只是表示逻辑上有些区别）。
+的确很少有写业务代码的时候会直接用上二叉树。但是真的没有吗？XML/DOM 是什么？是不是一棵树？为什么 DOM 可以和 XML 一一对应？因为 XML 序列化就是树的遍历的结果。能和 XML 对应，也就能跟 JSON 对应，因为两者都可以对应到树（只是表示逻辑上有些区别）。
 
-一个业务系统里有任务（Task），任务有相应的执行计划（Plan），计划可以用子任务组成，子任务可以是基础任务，也可以通过Plan拆分成更多的子任务。这是什么？这不就是树吗？那么怎么存储？JSON不就很好吗。怎么从JSON加载、再保存会JSON？树的遍历。怎么计算任务总共需要多少个基础任务？树的遍历。怎么计算计划总共需要多少时间？树的遍历。
+一个业务系统里有任务（Task），任务有相应的执行计划（Plan），计划可以用子任务组成，子任务可以是基础任务，也可以通过 Plan 拆分成更多的子任务。这是什么？这不就是树吗？那么怎么存储？JSON 不就很好吗。怎么从 JSON 加载、再保存会 JSON？树的遍历。怎么计算任务总共需要多少个基础任务？树的遍历。怎么计算计划总共需要多少时间？树的遍历。
 
 一个社交系统里，用户可以加好友，好友还有别的好友，这是什么？无向图。如果是知乎这样的关注系统呢？有向图。一个用户点了个赞，扩散到另一个用户至少要经过几次转发？最短路径。我要画一个小圈子里的人之间的关系图，怎么做？最小生成树。我要整理信息路径，看这批用户里哪些生产内容，哪些阅读内容，按什么次序传播，怎么做？拓扑排序。
 
@@ -94,9 +94,9 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Copyright & More | 延伸阅读
 
-笔者所有文章遵循[知识共享 署名 - 非商业性使用 - 禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。您还可以前往 [NGTE Books](https://ng-tech.icu/books/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
+笔者所有文章遵循[知识共享 署名 - 非商业性使用 - 禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。您还可以前往 [NGTE Books](https://wx-chevalier.github.io/books/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
 
-[![NGTE Books](https://s2.ax1x.com/2020/01/18/19uXtI.png)](https://ng-tech.icu/books/)
+[![NGTE Books](https://s2.ax1x.com/2020/01/18/19uXtI.png)](https://wx-chevalier.github.io/books/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

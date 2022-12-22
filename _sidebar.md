@@ -67,8 +67,9 @@
   - [7 数据结构](/数据结构/README.md)
     - [7.1 压缩](/数据结构/压缩/README.md)
       - [7.1.1 zlib](/数据结构/压缩/zlib/README.md)
-        - [7.1.1.1 gzip](/数据结构/压缩/zlib/gzip.md)
-        - [7.1.1.2 zlib、gzip、zip 等对比](/数据结构/压缩/zlib/zlib、gzip、zip%20等对比.md)
+        - [7.1.1.1 Deflate 算法](/数据结构/压缩/zlib/Deflate%20算法.md)
+        - [7.1.1.2 gzip](/数据结构/压缩/zlib/gzip.md)
+        - [7.1.1.3 zlib、gzip、zip 等对比](/数据结构/压缩/zlib/zlib、gzip、zip%20等对比.md)
     - [7.2 哈希表](/数据结构/哈希表/README.md)
       - [7.2.1 哈希函数](/数据结构/哈希表/哈希函数/README.md)
         

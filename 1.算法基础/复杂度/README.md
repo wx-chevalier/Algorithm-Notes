@@ -2,7 +2,7 @@
 
 在数据结构与算法的学习中，我们最常见的就是用大 O 符号来描述算法的复杂度。
 
-![](https://i.postimg.cc/SN8V5yFv/image.png)
+![算法复杂度变化](https://assets.ng-tech.icu/item/20230416202703.png)
 
 以下是一些最常用的大 O 标记法列表以及它们与不同大小输入数据的性能比较。
 

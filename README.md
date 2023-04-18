@@ -40,7 +40,7 @@
 
 首先，我们在数据结构与算法知识脑图中了解本系列包含的关键知识脉络：
 
-![数据结构与算法](https://i.postimg.cc/KckB0Fd3/image.png)
+![数据结构与算法](https://assets.ng-tech.icu/item/20230418155844.png)
 
 ## 为什么需要算法？
 

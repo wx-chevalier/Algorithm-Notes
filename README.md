@@ -7,23 +7,23 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wx-chevalier/AlgoDS-Series">
+  <a href="https://github.com/wx-chevalier/AlgoDS-Notes">
     <img src="https://s2.ax1x.com/2020/01/06/lr21MT.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">AlgoDS-Series</h3>
+  <h3 align="center">AlgoDS-Notes</h3>
 
   <p align="center">
     数据结构与算法系列笔记
     <br />
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Notes"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series">速览手册</a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Notes">速览手册</a>
     ·
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series/issues">Report Bug</a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Notes/issues">Report Bug</a>
     ·
-    <a href="https://github.com/wx-chevalier/AlgoDS-Series/issues">参考资料</a>
+    <a href="https://github.com/wx-chevalier/AlgoDS-Notes/issues">参考资料</a>
   </p>
 </p>
 
@@ -31,7 +31,7 @@
 
 # Introduction | 前言
 
-> 本书的精排目录导航版请参考 [https://ng-tech.icu/books/Algorithm-Series](https://ng-tech.icu/books/Algorithm-Series)。
+> 本书的精排目录导航版请参考 [https://ng-tech.icu/books/Algorithm-Notes](https://ng-tech.icu/books/Algorithm-Notes)。
 
 > “Bad programmers worry about the code. Good programmers worry about data structures and their relationships.”
 > — Linus Torvalds, creator of Linux
@@ -54,7 +54,7 @@
 
 ## 经典算法与机器学习
 
-当我们谈起算法这个词时，必然会想到数据结构中相关的经典算法与数据挖掘、机器学习、深度学习等[数据科学与人工智能](https://github.com/wx-chevalier/AIDL-Series)中讨论的算法。算法（Algorithm），在数学（算学）和计算机科学之中，为任何良定义的具体计算步骤的一个序列，常用于计算、数据处理和自动推理。精确而言，算法是一个表示为有限长列表的有效方法，也即解决问题的一系列步骤。数据结构中的经典算法是对确定的数据 使用如数组，链表，队列，图等一系列存储结构进行存储，通过优化时间复杂度以及空间复杂度提高效率来对数据进行处理，得出问题答案的过程。而机器学习中的算法是一类从数据中运用数学工具自动分析获得规律，并利用规律对未知数据进行预测的算法，注重数据来源以及数据规律。
+当我们谈起算法这个词时，必然会想到数据结构中相关的经典算法与数据挖掘、机器学习、深度学习等[数据科学与人工智能](https://github.com/wx-chevalier/AIDL-Notes)中讨论的算法。算法（Algorithm），在数学（算学）和计算机科学之中，为任何良定义的具体计算步骤的一个序列，常用于计算、数据处理和自动推理。精确而言，算法是一个表示为有限长列表的有效方法，也即解决问题的一系列步骤。数据结构中的经典算法是对确定的数据 使用如数组，链表，队列，图等一系列存储结构进行存储，通过优化时间复杂度以及空间复杂度提高效率来对数据进行处理，得出问题答案的过程。而机器学习中的算法是一类从数据中运用数学工具自动分析获得规律，并利用规律对未知数据进行预测的算法，注重数据来源以及数据规律。
 
 - 从目的做比较：经典算法是对确定的数据进行显而易见的操作，并注重效率(时间复杂度和空间复杂度)。例如排序。数据挖掘算法则是建立一个模式，学会对未知的数据进行预测或者分类。
 
@@ -101,15 +101,15 @@ Contributions are what make the open source community such an amazing place to b
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/AlgoDS-Series.svg?style=flat-square
-[contributors-url]: https://github.com/wx-chevalier/AlgoDS-Series/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/AlgoDS-Series.svg?style=flat-square
-[forks-url]: https://github.com/wx-chevalier/AlgoDS-Series/network/members
-[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/AlgoDS-Series.svg?style=flat-square
-[stars-url]: https://github.com/wx-chevalier/AlgoDS-Series/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/AlgoDS-Series.svg?style=flat-square
-[issues-url]: https://github.com/wx-chevalier/AlgoDS-Series/issues
-[license-shield]: https://img.shields.io/github/license/wx-chevalier/AlgoDS-Series.svg?style=flat-square
-[license-url]: https://github.com/wx-chevalier/AlgoDS-Series/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/AlgoDS-Notes.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/AlgoDS-Notes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/AlgoDS-Notes.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/AlgoDS-Notes/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/AlgoDS-Notes.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/AlgoDS-Notes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/AlgoDS-Notes.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/AlgoDS-Notes/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/AlgoDS-Notes.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/AlgoDS-Notes/blob/master/LICENSE.txt
 
 # Links

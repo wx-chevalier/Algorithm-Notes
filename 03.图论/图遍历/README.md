@@ -1,3 +1,3 @@
 # 图遍历
 
-![](https://i.postimg.cc/RhNw7Qm8/image.png)
+![](https://assets.ng-tech.icu/item/20230510140241.png)

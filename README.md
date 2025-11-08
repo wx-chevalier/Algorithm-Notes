@@ -40,7 +40,7 @@
 
 本系列文章涵盖了多种编程语言(Java, JavaScript, Go, Rust, Python 等)的数据结构与算法实现。详细代码请参考 [algorithm-snippets](https://github.com/wx-chevalier/algorithm-snippets)。
 
-![数据结构与算法知识脑图](https://assets.ng-tech.icu/item/20230418155844.png)
+![数据结构与算法知识脑图](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230418155844.png)
 
 ## 算法的实际应用
 

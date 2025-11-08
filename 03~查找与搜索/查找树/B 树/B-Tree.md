@@ -36,7 +36,7 @@ B-Tree 中的一条数据记录定义为二元组 [key, data]：
 3. 中间指针规则：若某指针位于相邻 key（keyi 和 keyi+1）之间且不为 null，其指向节点的所有 key 满足：
    keyi < key < keyi+1
 
-![B-Tree 示意](https://assets.ng-tech.icu/item/20230407224316.png)
+![B-Tree 示意](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230407224316.png)
 
 ## 查找算法
 

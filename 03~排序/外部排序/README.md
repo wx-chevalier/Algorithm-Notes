@@ -1,6 +1,6 @@
 # 大数据外部排序
 
-![](https://assets.ng-tech.icu/item/20230417221554.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20230417221554.png)
 
 # Links
 

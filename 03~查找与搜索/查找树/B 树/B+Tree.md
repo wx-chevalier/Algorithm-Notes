@@ -24,7 +24,7 @@
    - 根据键值范围选择子页面
    - 递归查找直到找到目标键值
 
-![使用 B 树索引查找一个键](https://assets.ng-tech.icu/item/1y1Y1U.md.png)
+![使用 B 树索引查找一个键](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/1y1Y1U.md.png)
 
 ## B+ 树特性
 
@@ -43,7 +43,7 @@ B+ 树是 B 树的一个重要变种，在数据库领域（如 MySQL）被广�
 
 下图是一个简单的 B+Tree 示意：
 
-![B+Tree 结构示意图](https://assets.ng-tech.icu/item/007rAy9hly1g162uiayzzj30cq037jrf.jpg)
+![B+Tree 结构示意图](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/007rAy9hly1g162uiayzzj30cq037jrf.jpg)
 
 ### B+ 树的优势
 

@@ -52,7 +52,7 @@ public static int[] getNext(String findStr) {
 
     return next;
 }
-```cpp
+```
 # Links
 
 - [字符串模式匹配——KMP 算法(时间复杂度为 O(m+n))](http://blog.sina.com.cn/s/blog_70bab9230101g0qv.html)

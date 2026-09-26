@@ -6,7 +6,7 @@
 
 ```cpp
 BalanceFactor = height(left-sutree) − height(right-sutree)
-```cpp
+```
 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/unbalanced_avl_trees.jpg) AVL 树中的结点的数据结构可以表示为
 
 ```cpp
@@ -36,7 +36,7 @@ public class AVLNode {
         parent = p;
     }
 }
-```cpp
+```
 # Rebalance: 平衡调整
 
 AVL 树的调整过程很类似于数学归纳法，每次在插入新节点之后都会找到离新插入节点最近的非平衡叶节点，然后对其进行旋转操作以使得树中的每个节点都处于平衡状态。
@@ -85,7 +85,7 @@ private AVLNode rotateLeft(AVLNode a) {
 
     return b;
 }
-```cpp
+```
 ## Right Rotation: 右旋, 左子树左子节点
 
 当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况
@@ -116,7 +116,7 @@ private AVLNode rotateRight(AVLNode a) {
 
     return b;
 }
-```cpp
+```
 ## Left-Right Rotation: 先左旋再右旋, 左子树右子节点
 
 在某些情况下我们需要进行两次旋转操作，譬如在如下的情况下，某个结点被插入到了左子树的右子结点: ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_subtree_of_left_subtree.jpg) 我们首先要以 A 为轴进行左旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_left_rotation.jpg) 然后需要以 C 为轴进行右旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_rotation.jpg) 最终得到的又是一棵平衡树 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg)
@@ -126,7 +126,7 @@ private AVLNode rotateLeftThenRight(AVLNode n) {
     n.left = rotateLeft(n.left);
     return rotateRight(n);
 }
-```cpp
+```
 ## Right-Left Rotation: 先右旋再左旋, 右子树左子节点
 
 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_subtree_of_right_subtree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_right_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg)
@@ -136,7 +136,7 @@ private AVLNode rotateRightThenLeft(AVLNode n) {
     n.right = rotateRight(n.right);
     return rotateLeft(n);
 }
-```cpp
+```
 # Java Implementation
 
 Java 实现的核心代码地址为 :[AVLTree](https://github.com/wx-chevalier/just-coder-handbook/blob/master/Algorithm/java/src/main/java/wx/algorithm/search/avl/AVLTree.java)
@@ -402,7 +402,7 @@ public class AVLTree {
         }
     }
 }
-```cpp
+```
 # Links
 
 - https://blog.csdn.net/xiaojin21cen/article/details/84060807

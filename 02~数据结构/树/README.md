@@ -53,5 +53,5 @@
  - sorting. They can organize programs better. They can give you a
  - representation that is easier to work with.
  */
-```cpp
+```
 一个节点数>5 的树，至少删去 1 个结点才可以使该树不连通。

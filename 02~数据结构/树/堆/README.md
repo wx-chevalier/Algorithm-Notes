@@ -48,7 +48,7 @@
         }
         a[i] = temp;
     }
-```cpp
+```
 更简短的表达为：
 
 ```cpp
@@ -57,7 +57,7 @@ void MinHeapFixup(int a[], int i)
 	for (int j = (i - 1) / 2; (j >= 0 && i != 0)&& a[i] > a[j]; i = j, j = (i - 1) / 2)
 		Swap(a[i], a[j]);
 }
-```cpp
+```
 插入时：
 
 ```cpp
@@ -67,7 +67,7 @@ void MinHeapFixup(int a[], int i)
         a[n] = nNum;
         MinHeapFixup(a, n);
     }
-```cpp
+```
 ### 堆的删除
 
 按定义，堆中每次都只能删除第 0 个数据。为了便于重建堆，实际的操作是将最后一个数据的值赋给根结点，然后再从根结点开始进行一次从上向下的调整。调整时先在左右儿子结点中找最小的，如果父结点比这个最小的子结点还小说明不需要调整了，反之将父结点和它交换后再考虑后面的结点。相当于从根结点将一个数据的“下沉”过程。下面给出代码：
@@ -100,4 +100,4 @@ void MinHeapDeleteNumber(int a[], int n)
 	Swap(a[0], a[n - 1]);
 	MinHeapFixdown(a, 0, n - 1);
 }
-```cpp
+```

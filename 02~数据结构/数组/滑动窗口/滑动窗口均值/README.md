@@ -7,4 +7,4 @@ Given a stream of integers, calculate the moving average within a fixed sliding 
 ```cpp
 Input: Numbers 1, 2, 3, 4, 5 - Sliding Window of 3
 Output: 4
-```cpp
+```

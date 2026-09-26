@@ -19,7 +19,7 @@ Relax(v, w, ω(v, w))
 if d[w]>d[v] + ω(v, w)
 
   {d[w]=d[v] + ω(v, w); p[w] = v;}
-```cpp
+```
 # Links
 
 - [彻底弄懂最短路径问题](http://www.cnblogs.com/hxsyl/p/3270401.html)

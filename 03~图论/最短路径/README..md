@@ -14,13 +14,12 @@
 
 我们用 d[i]数组表示顶点 s 到顶点 i 的最短路径的长度，用 p[i]表示顶点 i 在最短路径中的父顶点。可以将边松弛过程用一下代码来描述：
 
-```
+```cpp
 Relax(v, w, ω(v, w))
 if d[w]>d[v] + ω(v, w)
 
   {d[w]=d[v] + ω(v, w); p[w] = v;}
-```
-
+```cpp
 # Links
 
 - [彻底弄懂最短路径问题](http://www.cnblogs.com/hxsyl/p/3270401.html)

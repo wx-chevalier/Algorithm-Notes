@@ -35,7 +35,7 @@
 
 ## 前言
 
-> "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."  
+> "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
 > — Linus Torvalds, creator of Linux
 
 本系列文章涵盖了多种编程语言(Java, JavaScript, Go, Rust, Python 等)的数据结构与算法实现。详细代码请参考 [algorithm-snippets](https://github.com/wx-chevalier/algorithm-snippets)。

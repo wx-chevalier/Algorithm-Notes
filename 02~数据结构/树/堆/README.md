@@ -29,7 +29,7 @@
 
 每次插入都是将新数据放在数组最后。可以发现从这个新数据的父结点到根结点必然为一个有序的数列，现在的任务是将这个新数据插入到这个有序数据中——这就类似于**直接插入排序**中将一个数据并入到有序区间中，对照[《白话经典算法系列之二 直接插入排序的三种实现》](http://blog.csdn.net/morewindows/article/details/6665714)不难写出插入一个新数据时堆的调整代码：
 
-```
+```cpp
     //  新加入i结点  其父结点为(i - 1) / 2
     void MinHeapFixup(int a[], int i)
     {
@@ -48,34 +48,31 @@
         }
         a[i] = temp;
     }
-```
-
+```cpp
 更简短的表达为：
 
-```
+```cpp
 void MinHeapFixup(int a[], int i)
 {
 	for (int j = (i - 1) / 2; (j >= 0 && i != 0)&& a[i] > a[j]; i = j, j = (i - 1) / 2)
 		Swap(a[i], a[j]);
 }
-```
-
+```cpp
 插入时：
 
-```
+```cpp
     //在最小堆中加入新的数据nNum
     void MinHeapAddNumber(int a[], int n, int nNum)
     {
         a[n] = nNum;
         MinHeapFixup(a, n);
     }
-```
-
+```cpp
 ### 堆的删除
 
 按定义，堆中每次都只能删除第 0 个数据。为了便于重建堆，实际的操作是将最后一个数据的值赋给根结点，然后再从根结点开始进行一次从上向下的调整。调整时先在左右儿子结点中找最小的，如果父结点比这个最小的子结点还小说明不需要调整了，反之将父结点和它交换后再考虑后面的结点。相当于从根结点将一个数据的“下沉”过程。下面给出代码：
 
-```
+```cpp
 //  从i节点开始调整,n为节点总数 从0开始计算 i节点的子节点为 2*i+1, 2*i+2
 void MinHeapFixdown(int a[], int i, int n)
 {
@@ -103,4 +100,4 @@ void MinHeapDeleteNumber(int a[], int n)
 	Swap(a[0], a[n - 1]);
 	MinHeapFixdown(a, 0, n - 1);
 }
-```
+```cpp

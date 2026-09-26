@@ -4,17 +4,16 @@
 
 1962 年，Adelson-Velsikii 和 Landis 提出了一种结点在高度上相对平衡的二叉查找树，又称为 AVL 树。其平均和最坏情况下的查找时间都是`O(logn)`。同时，插入和删除的时间复杂性也会保持`O(logn)`，且在插入和删除之后，在高度上仍然保持平衡。AVL 树又称为平衡二叉树，即 Balanced Binary Tree 或者 Height-Balanced Tree，它或者是一棵空二叉树，或者是具有如下性质的二叉查找树：其左子树和右子树都是高度平衡的二叉树，且左子树和右子树的高度之差的绝对值不超过 1。如果将二叉树上结点的平衡因子 BF(Balanced Factor )定义为该结点的左子树与右子树的高度之差，根据 AVL 树的定义，AVL 树中的任意结点的平衡因子只可能是 -1(右子树高于左子树)、0 或者 1(左子树高于右子树)，在某些图中也会表示为绝对高度差，即 0，1，2 这种形式，请注意理解。
 
-```
+```cpp
 BalanceFactor = height(left-sutree) − height(right-sutree)
-```
-
+```cpp
 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/unbalanced_avl_trees.jpg) AVL 树中的结点的数据结构可以表示为
 
-```
+```cpp
 package wx.algorithm.search.avl;
 
 /**
- * Created by apple on 16/7/30.
+ - Created by apple on 16/7/30.
  */
 public class AVLNode {
 
@@ -28,17 +27,16 @@ public class AVLNode {
     public AVLNode left, right, parent;
 
     /**
-     * @function 默认构造函数
-     * @param k
-     * @param p
+     - @function 默认构造函数
+     - @param k
+     - @param p
      */
     AVLNode(int k, AVLNode p) {
         key = k;
         parent = p;
     }
 }
-```
-
+```cpp
 # Rebalance: 平衡调整
 
 AVL 树的调整过程很类似于数学归纳法，每次在插入新节点之后都会找到离新插入节点最近的非平衡叶节点，然后对其进行旋转操作以使得树中的每个节点都处于平衡状态。
@@ -47,11 +45,11 @@ AVL 树的调整过程很类似于数学归纳法，每次在插入新节点之�
 
 当新插入的结点为右子树的右子结点时，我们需要进行左旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_left_rotation.jpg) 我们应该找到离新插入的结点最近的一个非平衡结点，来以其为轴进行旋转，下面看一个比较复杂的情况:
 
-```
+```cpp
 /**
- * @param a
- * @return
- * @function 左旋操作
+ - @param a
+ - @return
+ - @function 左旋操作
  */
 private AVLNode rotateLeft(AVLNode a) {
 
@@ -87,13 +85,12 @@ private AVLNode rotateLeft(AVLNode a) {
 
     return b;
 }
-```
-
+```cpp
 ## Right Rotation: 右旋, 左子树左子节点
 
 当新插入的结点为左子树的左子结点时，我们需要进行右旋操作来保证此部分子树继续处于平衡状态。![](http://www.tutorialspoint.com/data_structures_algorithms/images/avl_right_rotation.jpg) 下面看一个比较复杂的情况
 
-```
+```cpp
 private AVLNode rotateRight(AVLNode a) {
 
     AVLNode b = a.left;
@@ -119,39 +116,36 @@ private AVLNode rotateRight(AVLNode a) {
 
     return b;
 }
-```
-
+```cpp
 ## Left-Right Rotation: 先左旋再右旋, 左子树右子节点
 
 在某些情况下我们需要进行两次旋转操作，譬如在如下的情况下，某个结点被插入到了左子树的右子结点: ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_subtree_of_left_subtree.jpg) 我们首先要以 A 为轴进行左旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_left_rotation.jpg) 然后需要以 C 为轴进行右旋操作 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_rotation.jpg) 最终得到的又是一棵平衡树 : ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg)
 
-```
+```cpp
 private AVLNode rotateLeftThenRight(AVLNode n) {
     n.left = rotateLeft(n.left);
     return rotateRight(n);
 }
-```
-
+```cpp
 ## Right-Left Rotation: 先右旋再左旋, 右子树左子节点
 
 ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_subtree_of_right_subtree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/subtree_right_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/right_unbalanced_tree.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/left_rotation.jpg) ![](http://www.tutorialspoint.com/data_structures_algorithms/images/balanced_avl_tree.jpg)
 
-```
+```cpp
 private AVLNode rotateRightThenLeft(AVLNode n) {
     n.right = rotateRight(n.right);
     return rotateLeft(n);
 }
-```
-
+```cpp
 # Java Implementation
 
 Java 实现的核心代码地址为 :[AVLTree](https://github.com/wx-chevalier/just-coder-handbook/blob/master/Algorithm/java/src/main/java/wx/algorithm/search/avl/AVLTree.java)
 
-```
+```cpp
 package wx.algorithm.search.avl;
 
 /**
- * Created by apple on 16/7/30.
+ - Created by apple on 16/7/30.
  */
 public class AVLTree {
 
@@ -159,9 +153,9 @@ public class AVLTree {
     private AVLNode root;
 
     /**
-     * @param key
-     * @return
-     * @function 插入函数
+     - @param key
+     - @return
+     - @function 插入函数
      */
     public boolean insert(int key) {
 
@@ -214,8 +208,8 @@ public class AVLTree {
     }
 
     /**
-     * @param delKey
-     * @function 根据关键值删除某个元素, 需要对树进行再平衡
+     - @param delKey
+     - @function 根据关键值删除某个元素, 需要对树进行再平衡
      */
     public void delete(int delKey) {
         if (root == null)
@@ -252,15 +246,15 @@ public class AVLTree {
     }
 
     /**
-     * @function 打印节点的平衡度
+     - @function 打印节点的平衡度
      */
     public void printBalance() {
         printBalance(root);
     }
 
     /**
-     * @param n
-     * @function 重平衡该树
+     - @param n
+     - @function 重平衡该树
      */
     private void rebalance(AVLNode n) {
 
@@ -305,9 +299,9 @@ public class AVLTree {
     }
 
     /**
-     * @param a
-     * @return
-     * @function 左旋操作
+     - @param a
+     - @return
+     - @function 左旋操作
      */
     private AVLNode rotateLeft(AVLNode a) {
 
@@ -381,9 +375,9 @@ public class AVLTree {
     }
 
     /**
-     * @param n
-     * @return
-     * @function 计算某个节点的高度
+     - @param n
+     - @return
+     - @function 计算某个节点的高度
      */
     private int height(AVLNode n) {
         if (n == null)
@@ -392,8 +386,8 @@ public class AVLTree {
     }
 
     /**
-     * @param AVLNodes
-     * @function 重设置每个节点的平衡度
+     - @param AVLNodes
+     - @function 重设置每个节点的平衡度
      */
     private void setBalance(AVLNode... AVLNodes) {
         for (AVLNode n : AVLNodes)
@@ -408,8 +402,7 @@ public class AVLTree {
         }
     }
 }
-```
-
+```cpp
 # Links
 
 - https://blog.csdn.net/xiaojin21cen/article/details/84060807

@@ -17,7 +17,7 @@
 (4)如果这条边连接的两个节点于图 G 中不在同一个连通分量中，则添加这条边到图 G 中.(使用并查集)
 (5)重复 3，直至图 G 中所有的节点都在同一个连通分量中
 
-```
+```cpp
 public class KruskalMST {
 
     private Queue<Edge> mst = new Queue<>();
@@ -42,9 +42,7 @@ public class KruskalMST {
     }
 }
 
-
-```
-
+```cpp
 `Kruskal` 算法 基本上取决于优先队列的选择，以及并查集的实现。比较优的算法效率为`O(ElogE)`E 为图中的边数.对优先队列和并查集不了解的同学可以看看我这两篇文章，[查找算法之顺序、二分、二叉搜索树、红黑树](http://threezj.com/2016/03/20/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95%E4%B9%8B%E9%A1%BA%E5%BA%8F%E3%80%81%E4%BA%8C%E5%88%86%E3%80%81%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91%E3%80%81%E7%BA%A2%E9%BB%91%E6%A0%91/) 和 [并查集](http://threezj.com/2016/03/12/Union-Find%20/)
 
 ## Prim
@@ -59,7 +57,7 @@ Prim 算法，简单的说就是从一个点开始不断让树长大的过程,�
 (6)重复 4
 ![](http://7xrsib.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9C%9620160424222602.jpg)
 
-```
+```cpp
 private Edge[] edgeTo;        // edgeTo[v] = shortest edge from tree vertex to non-tree vertex
     private double[] distTo;      // distTo[v] = weight of shortest such edge
     private boolean[] marked;     // marked[v] = true if v on tree, false otherwise
@@ -102,8 +100,7 @@ private Edge[] edgeTo;        // edgeTo[v] = shortest edge from tree vertex to n
 
     }
 
-```
-
+```cpp
 > Kruskal can have better performance if the edges can be sorted in linear time, or are already sorted。Prim’s better if the number of edges to vertices is high.
 
 # Links

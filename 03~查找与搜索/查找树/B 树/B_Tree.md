@@ -61,8 +61,7 @@ BTree_Search(node, key) {
 }
 
 data = BTree_Search(root, my_key);
-```
-
+```cpp
 ## 性能特性
 
 - 对于度为 d 的 B-Tree，索引 N 个 key：

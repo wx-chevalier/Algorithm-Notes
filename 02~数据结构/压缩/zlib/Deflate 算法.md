@@ -32,8 +32,7 @@ while look-ahead buffer is not empty
         shift window by 1;
     fi
 end while
-```
-
+```cpp
 可以看出 encoding 过程需要做个最长匹配字符串的查找，也可以选择合适的数据结构来表示 search buffer/look-ahead buffer 来加速查找。encoding 的输出是个 token stream，token 可以是 `<length, distance>` 也可以是 symbol 本身。
 decoding 的伪代码：
 
@@ -45,8 +44,7 @@ for each token (<length, distance>  or symbol)
         go reverse in previous output by offset characters and copy character wise for length symbols; print symbol;
     fi
 next
-```
-
+```cpp
 # Huffman coding
 
 哈夫曼编码应该不需要多做介绍了，每个学过数据结构的都具备这个知识。recap 下 Huffman coding 是一种前缀编码，根据统计每个字符在整个待编码数据中出现的次数，从小到大排序，由底向上动态构建一颗二叉树，二叉树的叶子节点就是每个字符，出现次数越小的字符处于二叉树的底部，对应的码字的长度也越长。这样构建的二叉树就是 huffman 树，整个字符集以及其对应的码字构成整个码表。由于码表是根据要编码的数据动态生成的，想要解码必须要有这个码表，因此码表需要和数据一起传输。
@@ -86,8 +84,7 @@ next
 23-->110 110
 
 24-->110 111
-```
-
+```cpp
 Deflate 通过这样的方式在码表长度和算法的计算复杂度之间做了 trade off。
 
 ## 对 literal/length 的 huffman coding
@@ -110,6 +107,5 @@ Deflate 对 MCL 再进行一次 huffman coding，同时限制生成的 huffman �
 
 ```s
 16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15
-```
-
+```cpp
 采用这个特殊顺序记录 code length 的原因是为了能让 0 尽可能出现在 code length 序列的尾部（16,17,18 是游程编码进入的特殊字符，所以出现的频率可能会高些，所以放前面）。这样以来可以对 code length 进行 trim 操作，去掉 trailing 的 0，然后记录下原来 code length 序列长度（alphabet 大小）解码的时候就能够正确恢复。

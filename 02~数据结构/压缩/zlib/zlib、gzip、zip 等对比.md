@@ -20,8 +20,7 @@
         └── man3
             └── zlib.3
 6 directories, 8 files
-```
-
+```cpp
 仔细观察的话，发现 zlib 并没有像其它的程序一样，编译出二进制可指定代码，只有头文件，库文件和文档，也就是说 zlib 并不提供对文件的直接操作。再来会过来头看 zlib 源代码的 zlib.3.pdf 文件，它是这样说的：“zlib 库是一个通用的数据压缩库，它提供在内存当中的压缩和解压算法，目前只支持 deflation 一种算法，将来可能会添加其它压缩算法”，也就是说整个 zlib 实际上只有一种算法，那就是 deflation 算法。zlib 提供了几个比较简单的函数来压缩和解压数据:
 
 ```c
@@ -70,8 +69,7 @@ int ZEXPORT compress (dest, destLen, source, sourceLen)
 {
     return compress2(dest, destLen, source, sourceLen, Z_DEFAULT_COMPRESSION);
 }
-```
-
+```cpp
 通过参数，我们可以看到 zlib 的压缩确实像上面说的，没有涉及到文件操作，不读取硬盘上的数据文件进行压缩，只操作内存数据。那么我们来测试一下用 compress 函数压缩数据:
 
 ```c
@@ -138,8 +136,7 @@ int my_write(char* fname,const char * buffer)
         return 1;
     }
 }
-```
-
+```cpp
 编译运行:
 
 ```c
@@ -149,8 +146,7 @@ The String You Want to Compress is: This is the string
 Compress Sucess!
 	-Sucess to write into disk!
 Original String is: This is the string
-```
-
+```cpp
 到这里一切正常，那是不是 zlib 提供就是 deflation 算法呢？实则不然，zlib 还提供了一种 zlib 数据格式，在原有压缩数据的基础上，添加头部和尾部信息，在 HTTP/1.1 协议中，content-encoding 类型中的 deflate，实际上不是 deflation 算法处理的原始数据，而是添加了头部和尾部信息的 ZLIB 格式。ZLIB 的头部和尾部数据信息可以查看 rfc1950。
 
 那么 gzip 和 zlib 又有什么区别呢，在 gzip 的说明文档中，看到了这样的文字:
@@ -198,8 +194,7 @@ bit 6,7: reserved
 ? bytes compressed data
 4 bytes crc32
 4 bytes uncompressed input size modulo 2^32
-```
-
+```cpp
 也就是说 gzip 也是使用 deflation 算法进行数据的压缩，只是存储格式和不一样，另外 gzip 只能处理当个文件，然 zip 格式则可以处理目录。综上：
 
 1，zlib 提供一系列函数库，可以采用 deflation 算法对数据进行压缩，还提供 ZLIB DATA FORMAT 的跨平台的数据格式。

@@ -154,8 +154,7 @@ if __name__ == "__main__":
     print(f"数据点: {data_points}")
     print(f"目标点: {target_point}")
     print(f"最近邻: {nearest}, 距离: {math.sqrt(dist_sq):.4f}")
-```
-
+```cpp
 ---
 
 ## 5. 复杂度与优缺点
